@@ -1,0 +1,11 @@
+[submodule "nghttp3/nghttp3"]
+	path = nghttp3/nghttp3
+	url = https://github.com/ngtcp2/nghttp3.git
+
+[submodule "ngtcp2/ngtcp2"]
+	path = ngtcp2/ngtcp2
+	url = https://github.com/ngtcp2/ngtcp2.git
+
+[submodule "wolfssl/wolfssl"]
+	path = wolfssl/wolfssl
+	url = https://github.com/wolfSSL/wolfssl.git
