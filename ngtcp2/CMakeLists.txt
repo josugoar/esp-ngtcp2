@@ -1,0 +1,51 @@
+set(srcs
+    "ngtcp2/crypto/shared.c"
+    "ngtcp2/crypto/wolfssl/wolfssl.c"
+    "ngtcp2/lib/ngtcp2_acktr.c"
+    "ngtcp2/lib/ngtcp2_addr.c"
+    "ngtcp2/lib/ngtcp2_balloc.c"
+    "ngtcp2/lib/ngtcp2_bbr.c"
+    "ngtcp2/lib/ngtcp2_buf.c"
+    "ngtcp2/lib/ngtcp2_cc.c"
+    "ngtcp2/lib/ngtcp2_cid.c"
+    "ngtcp2/lib/ngtcp2_conn.c"
+    "ngtcp2/lib/ngtcp2_conv.c"
+    "ngtcp2/lib/ngtcp2_crypto.c"
+    "ngtcp2/lib/ngtcp2_err.c"
+    "ngtcp2/lib/ngtcp2_frame_chain.c"
+    "ngtcp2/lib/ngtcp2_gaptr.c"
+    "ngtcp2/lib/ngtcp2_idtr.c"
+    "ngtcp2/lib/ngtcp2_ksl.c"
+    "ngtcp2/lib/ngtcp2_log.c"
+    "ngtcp2/lib/ngtcp2_map.c"
+    "ngtcp2/lib/ngtcp2_mem.c"
+    "ngtcp2/lib/ngtcp2_objalloc.c"
+    "ngtcp2/lib/ngtcp2_opl.c"
+    "ngtcp2/lib/ngtcp2_path.c"
+    "ngtcp2/lib/ngtcp2_pkt.c"
+    "ngtcp2/lib/ngtcp2_pmtud.c"
+    "ngtcp2/lib/ngtcp2_ppe.c"
+    "ngtcp2/lib/ngtcp2_pq.c"
+    "ngtcp2/lib/ngtcp2_pv.c"
+    "ngtcp2/lib/ngtcp2_qlog.c"
+    "ngtcp2/lib/ngtcp2_range.c"
+    "ngtcp2/lib/ngtcp2_ringbuf.c"
+    "ngtcp2/lib/ngtcp2_rob.c"
+    "ngtcp2/lib/ngtcp2_rst.c"
+    "ngtcp2/lib/ngtcp2_rtb.c"
+    "ngtcp2/lib/ngtcp2_settings.c"
+    "ngtcp2/lib/ngtcp2_str.c"
+    "ngtcp2/lib/ngtcp2_strm.c"
+    "ngtcp2/lib/ngtcp2_transport_params.c"
+    "ngtcp2/lib/ngtcp2_unreachable.c"
+    "ngtcp2/lib/ngtcp2_vec.c"
+    "ngtcp2/lib/ngtcp2_version.c"
+    "ngtcp2/lib/ngtcp2_window_filter.c")
+
+idf_component_register(SRCS "${srcs}"
+                    INCLUDE_DIRS port/include ngtcp2/crypto/includes ngtcp2/lib/includes
+                    PRIV_INCLUDE_DIRS port/private_include ngtcp2/crypto ngtcp2/lib
+                    REQUIRES wolfssl)
+
+target_compile_options(${COMPONENT_LIB} PRIVATE "-Wno-format" "-Wno-maybe-uninitialized")
+target_compile_definitions(${COMPONENT_LIB} PUBLIC "-DHAVE_CONFIG_H")
