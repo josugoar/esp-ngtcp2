@@ -1,6 +1,4 @@
 set(srcs
-    "ngtcp2/crypto/shared.c"
-    "ngtcp2/crypto/wolfssl/wolfssl.c"
     "ngtcp2/lib/ngtcp2_acktr.c"
     "ngtcp2/lib/ngtcp2_addr.c"
     "ngtcp2/lib/ngtcp2_balloc.c"
@@ -43,9 +41,8 @@ set(srcs
     "ngtcp2/lib/ngtcp2_window_filter.c")
 
 idf_component_register(SRCS "${srcs}"
-                    INCLUDE_DIRS port/include ngtcp2/crypto/includes ngtcp2/lib/includes
-                    PRIV_INCLUDE_DIRS port/private_include ngtcp2/crypto ngtcp2/lib
-                    REQUIRES wolfssl)
+                    INCLUDE_DIRS port/include ngtcp2/lib/includes
+                    PRIV_INCLUDE_DIRS port/private_include ngtcp2/lib)
 
 target_compile_options(${COMPONENT_LIB} PRIVATE "-Wno-format" "-Wno-maybe-uninitialized")
-target_compile_definitions(${COMPONENT_LIB} PUBLIC "-DHAVE_CONFIG_H")
+target_compile_definitions(${COMPONENT_LIB} PRIVATE "-DHAVE_CONFIG_H")
