@@ -1073,3 +1073,15 @@ Turn on timer debugging (used when CPU cycles not available)
  *  #define HAVE_AES_ECB
  *  #define HAVE_AES_DIRECT
  */
+
+/* Enable QUIC support */
+#define HAVE_TLS_EXTENSIONS
+#define HAVE_ALPN
+#define OPENSSL_EXTRA
+#define WOLFSSL_AES_COUNTER
+#define WOLFSSL_AES_DIRECT
+#define HAVE_CURVE25519
+#define HAVE_SNI
+#define WOLFSSL_QUIC
+#define HAVE_EX_DATA
+#define HAVE_SESSION_TICKET
