@@ -1,7 +1,7 @@
 # esp-ngtcp2
 
 <p align="center">
-  <img src="assets/call-it-tcp2-one-more-time.jpg" alt="argdeco" width="540" height="453" />
+  <img src="assets/call-it-tcp2-one-more-time.jpg" alt="argdeco" width="380" height="320" />
 </p>
 
 <h1></h1>
