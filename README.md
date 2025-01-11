@@ -8,7 +8,7 @@
 
 > QUIC protocol stack for ESP-IDF
 
-## References
+## Sources
 
 * [nghttp3](https://github.com/ngtcp2/nghttp3)
 * [ngtcp2](https://github.com/ngtcp2/ngtcp2)
