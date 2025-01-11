@@ -33,5 +33,5 @@ idf_component_register(SRCS "${srcs}"
                     INCLUDE_DIRS port/include nghttp3/lib/includes
                     PRIV_INCLUDE_DIRS port/private_include nghttp3/lib)
 
-target_compile_options(${COMPONENT_LIB} PRIVATE "-Wno-format")
-target_compile_definitions(${COMPONENT_LIB} PUBLIC "-DHAVE_CONFIG_H")
+target_compile_options(${COMPONENT_LIB} PRIVATE "-Wno-format" "-Wno-maybe-uninitialized")
+target_compile_definitions(${COMPONENT_LIB} PRIVATE "-DHAVE_CONFIG_H")
