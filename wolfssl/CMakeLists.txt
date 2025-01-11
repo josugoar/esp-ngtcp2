@@ -1010,6 +1010,8 @@ if(FLAG_ALRREADY_FOUND_WOLFSSL_ESPIDF EQUAL -1)
     # Flag not found, append it
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DWOLFSSL_ESPIDF")
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DWOLFSSL_USER_SETTINGS")
+    target_compile_definitions(${COMPONENT_LIB} PUBLIC "-DWOLFSSL_ESPIDF")
+    target_compile_definitions(${COMPONENT_LIB} PUBLIC "-DWOLFSSL_USER_SETTINGS")
 endif()
 
 if(WOLFSSL_ROOT)
