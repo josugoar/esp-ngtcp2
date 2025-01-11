@@ -7,3 +7,6 @@
 [submodule "wolfssl/wolfssl"]
 	path = wolfssl/wolfssl
 	url = https://github.com/wolfSSL/wolfssl.git
+[submodule "ngtcp2_crypto_wolfssl/ngtcp2"]
+	path = ngtcp2_crypto_wolfssl/ngtcp2
+	url = https://github.com/ngtcp2/ngtcp2.git
