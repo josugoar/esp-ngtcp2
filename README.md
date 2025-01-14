@@ -11,7 +11,7 @@
 ## Usage
 
 > [!NOTE]  
-> `WOLFSSL_USER_SETTINGS` is defined automatically and altough wolfssl recommends that the project defines it as well, it is not needed in this case. If for some reason the settings file is not included, just add somthing like `idf_build_set_property(COMPILE_OPTIONS "-DWOLFSSL_USER_SETTINGS" APPEND)` after the project declaration of the project's CMake file.
+> `WOLFSSL_USER_SETTINGS` is defined automatically and altough wolfssl recommends that the project defines it as well, it is not needed in this case. If for some reason the settings file is not included, just add something like `idf_build_set_property(COMPILE_OPTIONS "-DWOLFSSL_USER_SETTINGS" APPEND)` after the project declaration of the project's CMake file.
 
 Clone or directly copy the components into the ESP-IDF components directory. Keep in mind that they use git submodules by default, so it is required to initialize the submodules or clone the upstream repos into each component's directory.
 
